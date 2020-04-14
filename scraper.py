@@ -10,6 +10,7 @@ GET_URL = "http://savevideo.me/"
 def get_urls(raw_url):
     urls = {}
     opts = ChromeOptions()
+    opts.add_argument('--headless')
     opts.add_experimental_option("detach", True)
     driver = webdriver.Chrome(chrome_options=opts)
     wait = ui.WebDriverWait(driver, 10)
