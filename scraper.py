@@ -16,7 +16,6 @@ def get_urls(raw_url):
         opts.add_experimental_option("detach", True)
         driver = webdriver.Chrome(chrome_options=opts)
         wait = ui.WebDriverWait(driver, 10)
-        print("Started")
         driver.get(GET_URL)
         field = driver.find_element_by_css_selector('.url_input')
         field.send_keys(raw_url)
